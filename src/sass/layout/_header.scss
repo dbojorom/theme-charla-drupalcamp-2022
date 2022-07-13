@@ -1,0 +1,53 @@
+///
+/// HEADER
+/// @group layout
+/// This file contains header styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+
+.header {
+  background: var(--color-emphasis--200) no-repeat;
+  color: var(--base-text-color);
+  height: utils.funct·torem(70px);
+  position: relative;
+  z-index: 101;
+
+  a {
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .navbar {
+    align-items: center;
+    display: flex;
+    height: utils.funct·torem(70px);
+    justify-content: space-between;
+    padding: 0;
+
+    &__brand {
+      width: utils.funct·torem(100px);
+
+      @media screen and (min-width: 480px) {
+        height: utils.funct·torem(28px);
+        width: auto;
+      }
+
+      svg {
+        fill: var(--color-neutral-gray--100);
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &__nav {
+      align-items: center;
+      display: flex;
+      gap: utils.funct·torem(12px);
+    }
+  }
+}

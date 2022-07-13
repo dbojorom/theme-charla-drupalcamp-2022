@@ -1,0 +1,31 @@
+///
+///
+/// SASS Miscellaneous Maps
+/// @group utils
+/// This file contains sass miscellaneous maps.
+/// ---------------------------------
+
+///# Breakpoint map
+$breakpoints: (
+  xs : '0',
+  sm : '480px',
+  md : '768px',
+  lg : '992px',
+  xl : '1200px',
+  xxl: '1440px'
+);
+
+///# Spacing map
+$spacings: (
+  100: '64px',
+  90 : '56px',
+  80 : '48px',
+  70 : '40px',
+  60 : '32px',
+  50 : '24px',
+  40 : '16px',
+  30 : '12px',
+  20 : '8px',
+  10 : '4px',
+  5  : '2px'
+);

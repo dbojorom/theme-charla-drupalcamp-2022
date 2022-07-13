@@ -1,0 +1,42 @@
+///
+/// Icon Element
+/// @group elements
+/// This file contains icon styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+@use '../abstracts/map-icons' as map-icon;
+@use '../base/placeholders';
+
+/// ---------------------------------
+
+.e-icon {
+  display: inline-flex;
+
+  &::before {
+    @extend %font-icon;
+  }
+
+  @each $icon-category, $value in map-icon.$icons {
+    @if type-of($value) == "map" {
+      @each $icon-name, $icon-code in $value {
+
+        &--#{$icon-name}::before {
+          --e-icon__content: var(--icon-#{$icon-category}--#{$icon-name});
+        }
+      }
+    }
+  }
+
+  &--circle {
+    &::before {
+      align-items: center;
+      border-radius: 50%;
+      color: var(--color-main--white);
+      display: inline-flex;
+      height: utils.funct·torem(28px);
+      justify-content: center;
+      width: utils.funct·torem(28px);
+    }
+  }
+}

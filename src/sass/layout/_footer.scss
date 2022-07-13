@@ -1,0 +1,27 @@
+///
+/// FOOTER
+/// @group layout
+/// This file contains footer styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+
+.footer {
+  background: var(--color-emphasis--200);
+  color: var(--base-text-color);
+  padding: utils.funct·torem(20px) 0;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    svg {
+      fill: var(--base-text-color);
+    }
+  }
+}

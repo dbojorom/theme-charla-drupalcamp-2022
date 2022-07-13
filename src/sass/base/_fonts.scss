@@ -1,0 +1,30 @@
+///
+/// FONTS
+/// @group base
+/// This file contains custom fonts, icon font, ...
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+/// Fonts family
+///
+@font-face {
+  font-family: Roboto-Regular;
+  font-style: normal;
+  src: url("#{utils.$var·font-path}/Roboto-Regular.otf") format("opentype");
+}
+
+///# Icon font
+@font-face {
+  font-family: #{utils.$var·iconfont-family};
+  src: url("#{utils.$var·iconfont-path}/#{utils.$var·iconfont-family}.eot?#{utils.$var·iconfont-hash}");
+  src:
+    url("#{utils.$var·iconfont-path}/#{utils.$var·iconfont-family}.eot?#{utils.$var·iconfont-hash}#iefix") format('embedded-opentype'),
+    url("#{utils.$var·iconfont-path}/#{utils.$var·iconfont-family}.ttf?#{utils.$var·iconfont-hash}") format('truetype'),
+    url("#{utils.$var·iconfont-path}/#{utils.$var·iconfont-family}.woff?#{utils.$var·iconfont-hash}") format('woff'),
+    url("#{utils.$var·iconfont-path}/#{utils.$var·iconfont-family}.svg?#{utils.$var·iconfont-hash}##{utils.$var·iconfont-family}") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

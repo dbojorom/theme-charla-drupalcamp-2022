@@ -1,0 +1,20 @@
+///
+///
+/// SASS Icon Map
+/// @group utils
+/// This file contains sass icon map.
+/// ---------------------------------
+
+///# Icon map
+$icons: (
+  'action': (
+    'add'         : '"\ea0a"',
+    'edit'        : '"\e905"',
+    'home'        : '"\e900"',
+    'minus'       : '"\ea0b"',
+  ),
+  'entity': (
+    'type-a': '"\e912"',
+    'type-b': '"\e922"',
+  ),
+);

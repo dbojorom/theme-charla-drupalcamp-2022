@@ -1,0 +1,30 @@
+///
+/// BASE
+/// @group base
+/// This file contains very basic styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+body {
+  background-color: var(--color-neutral-gray--10);
+  color: var(--base-text-color);
+  font: var(--base-font-weight) var(--base-font-size)/var(--base-line-height) var(--base-font-family);
+}
+
+a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+strong {
+  font-family: var(--font-family--primary-bold);
+  font-weight: var(--font-weight-bold);
+}
+
+::selection {
+  background-color: var(--color-neutral-blue--10);
+}

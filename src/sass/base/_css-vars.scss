@@ -1,0 +1,48 @@
+///
+/// VARIABLES CSS
+/// @group base
+/// This file contains css variables.
+/// ---------------------------------
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mix;
+@use '../abstracts/map-colors' as map-col;
+@use '../abstracts/map-icons' as map-icon;
+
+/// ---------------------------------
+$prefix-color: "color";
+$prefix-icons: "icon";
+
+:root {
+  /// ---------------------------------
+  /// Color system
+  ///
+  ///# Theme colors
+  @include mix.cssvars-from-map(map-col.$color_theme, $prefix-color);
+  @include mix.cssvars-from-map(map-col.$color_content_types, $prefix-color);
+
+  /// ---------------------------------
+  /// Icons
+  ///
+  @include mix.cssvars-from-map(map-icon.$icons, $prefix-icons);
+
+  --icon-font-family: #{var.$iconfont-family};
+  --icon-font-size: 18px;
+
+  /// ---------------------------------
+  /// Typography
+  ///
+  ///# Font family
+  --font-family--primary: 'Roboto-Regular', helvetica, sans-serif;
+
+  ///# Font weights
+  --font-weight--light: 300;
+  --font-weight--normal: 400;
+  --font-weight--bold: 700;
+
+
+  /// ---------------------------------
+  /// Layout
+  ///
+  --layout-container: 1160px;
+}

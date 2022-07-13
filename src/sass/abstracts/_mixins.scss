@@ -1,0 +1,27 @@
+///
+/// MIXINS
+/// @group utils
+/// This file contains mixins.
+/// ---------------------------------
+
+@use 'variables' as var;
+@use 'functions' as funct;
+
+/// ---------------------------------
+
+//# Generate css variables from maps
+@mixin cssvars-from-map($map, $prefix) {
+  @each $category, $value in $map {
+    @if type-of($value) == "map" {
+      @each $subcategory, $subvalue in $value {
+        $cssvar_name_second: --#{$prefix}-#{$category}--#{$subcategory};
+
+        #{$cssvar_name_second}: #{$subvalue};
+      }
+    }
+
+    @else {
+      --#{$prefix}--#{$category}: #{$value};
+    }
+  }
+}

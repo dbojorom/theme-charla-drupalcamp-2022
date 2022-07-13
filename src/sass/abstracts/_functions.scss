@@ -1,0 +1,27 @@
+///
+/// FUNCTIONS
+/// @group utils
+/// This file contains functions.
+/// ---------------------------------
+
+@use "sass:math";
+@use 'variables' as var;
+
+/// ---------------------------------
+///
+/// Calculate rem value from px number.
+/// @access public
+/// @param {number} $value - valor to conversion.
+/// @param {number} $rem-size - basis for the conversion.
+/// @return {number} - number converted to rem.
+
+@function torem($value) {
+  @if type-of($value) != 'number' {
+    @warn 'values: #{$value} is not a number.';
+
+    @return null;
+  }
+  $rem-size: math.div($value, var.$base-font-size);
+
+  @return #{$rem-size}rem;
+}

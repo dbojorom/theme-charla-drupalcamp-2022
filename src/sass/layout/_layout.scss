@@ -1,0 +1,41 @@
+///
+/// LAYOUT
+/// @group layout
+/// This file contains layout styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+@use '../base/placeholders';
+
+/// ---------------------------------
+
+//# Page
+.l-page {
+  &__main {
+    margin-bottom: utils.funct·torem(80px);
+  }
+}
+
+//# Section
+.l-section {
+  &--page-title {
+    .page-title {
+      @extend %main-title;
+
+      border-bottom: 1px solid var(--color-neutral-gray--20);
+      display: block;
+      margin-bottom: utils.funct·torem(16px);
+      max-width: initial;
+      overflow: initial;
+      padding-bottom: utils.funct·torem(16px);
+      text-overflow: initial;
+      white-space: normal;
+    }
+  }
+}
+
+//# Container
+.l-container {
+  margin-left: utils.funct·torem(16px);
+  margin-right: utils.funct·torem(16px);
+}

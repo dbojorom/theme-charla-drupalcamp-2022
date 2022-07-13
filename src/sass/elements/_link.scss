@@ -1,0 +1,50 @@
+///
+/// Link Element
+/// @group elements
+/// This file contains link styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+@use 'button';
+
+/// ---------------------------------
+
+.e-link {
+  $self: &;
+
+  align-items: center;
+  background-color: var(--e-link__background-color, transparent);
+  border: var(--e-link__border-width, 0) var(--e-link__border-style, solid) var(--e-link__border-color, currentColor);
+  color: var(--e-link__text-color, var(--color-neutral-gray--70));
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--e-link__font-family, var(--font-family--primary-regular));
+  font-size: var(--e-link__font-size, utils.funct·torem(15px));
+  font-weight: var(--e-link__font-weight, var(--font-weight--normal));
+  gap: var(--e-link__gap, utils.funct·torem(6px));
+  justify-content: center;
+  line-height: var(--e-link__line-height, utils.funct·torem(24px));
+  padding: var(--e-link__padding--y, utils.funct·torem(8px)) var(--e-link__padding--x, utils.funct·torem(8px));
+  position: relative;
+  text-align: center;
+  text-decoration: var(--e-link__text-decoration, none);
+  vertical-align: middle;
+
+  &--icon-only {
+    width: var(--e-link-icon__size, utils.funct·torem(24px));
+    height: var(--e-link-icon__size, utils.funct·torem(24px));
+    padding: 0;
+  }
+
+  &--underline {
+    --e-link__text-decoration: underline;
+  }
+
+  &-button {
+    @extend .e-button;
+
+    &--primary {
+      @extend .e-button--primary;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+///
+/// Tabs component
+/// @group components
+/// This file contains tabs styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+
+.c-tabs {
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: utils.funct·torem(18px);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .nav-link {
+      background: none;
+      border: 0;
+      color: var(--color-neutral-gray--50);
+      font-family: var(--font-primary-bold);
+      line-height: utils.funct·torem(18px);
+      padding: utils.funct·torem(21px) 0;
+
+      &.active {
+        border-bottom: 4px solid var(--color-main--primary);
+        color: var(--color-main--primary);
+      }
+
+      &__label {
+        &--mark {
+          &::after {
+            background: var(--color-emphasis--220);
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: utils.funct·torem(8px);
+            margin-left: utils.funct·torem(4px);
+            position: relative;
+            top: utils.funct·torem(-8px);
+            width: utils.funct·torem(8px);
+          }
+        }
+      }
+    }
+  }
+
+  &__panel {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

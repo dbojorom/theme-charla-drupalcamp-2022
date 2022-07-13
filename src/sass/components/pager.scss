@@ -1,0 +1,49 @@
+///
+/// PAGER
+/// @group components
+/// This file contains pager component styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+
+.pager {
+  &__link {
+    color: var(--color-main--primary);
+    background-color: transparent;
+
+    &:hover {
+      color: currentColor;
+      background: none;
+    }
+
+    &.is-active {
+      &,
+      &:hover {
+        color: var(--color-main--white);
+        background: var(--color-main--primary);
+      }
+    }
+  }
+
+  &__item {
+    &--current {
+      color: var(--color-main--white);
+    }
+
+    &--first,
+    &--previous,
+    &--next,
+    &--last {
+      .pager__link {
+        &:hover {
+          &::before,
+          &::after {
+            background: var(--color-main--primary);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+///
+/// Main styles
+///
+
+// Base
+@import 'base/mixins';
+@import 'base/variables';
+
+// Layout
+@import 'components/header';
+@import 'components/footer';
+
+
+// Components
+@import 'components/menu';
+@import 'components/buttons';
+
+
+// Pages
+@import 'pages/homepage';
+@import 'pages/proyects';

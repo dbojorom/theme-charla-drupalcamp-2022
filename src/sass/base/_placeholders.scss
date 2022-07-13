@@ -1,0 +1,39 @@
+///
+/// PLACEHOLDERS
+/// @group base
+/// This file contains placeholder styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+///# Font icon common styles (by icomoon)
+///
+%font-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  background-color: var(--e-icon__background_color, transparent);
+  color: var(--e-icon__color, currentColor);
+  content: var(--e-icon__content, '');
+  font-family: var(--icon-font-family) !important;
+  font-size: var(--e-icon__font-size, var(--icon-font-size));
+  font-style: normal;
+  font-variant: normal;
+  font-weight: var(--e-icon__font-weight, normal);
+  line-height: var(--e-icon__line-height, 1);
+  speak: none;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+///# Common styles of the main title
+///
+%main-title {
+  color: var(--color-main--primary);
+  font-family: var(--font-primary-bold);
+  font-size: utils.funct·torem(24px);
+  line-height: utils.funct·torem(36px);
+  margin: utils.funct·torem(16px) 0;
+}

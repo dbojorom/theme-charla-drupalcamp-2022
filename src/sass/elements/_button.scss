@@ -1,0 +1,72 @@
+///
+/// Button Element
+/// @group elements
+/// This file contains button styles.
+/// ---------------------------------
+
+@use '../abstracts' as utils;
+
+/// ---------------------------------
+
+.e-button {
+  align-items: center;
+  background-color: var(--button__background-color, var(--color-neutral-gray--80));
+  border: var(--button__border-width, 0) var(--button__border-style, solid) var(--button__border-color, currentColor);
+  border-radius: var(--button__border-radius, 6px);
+  color: var(--button__text-color, var(--color-main--white));
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--button__font-family, var(--font-family--primary-regular));
+  font-size: var(--button__font-size, 15px);
+  gap: var(--button__gap, 14px);
+  font-weight: var(--button__font-weight, var(--font-weight--normal));
+  justify-content: center;
+  line-height: var(--button__line-height, 24px);
+  padding: var(--button__padding, 8px 12px);
+  text-align: center;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--button__background-color--hover, darken(#071d49, 5%));
+    color: var(--button__text-color--hover, var(--color-main--white));
+  }
+
+  &--primary {
+    --button__background-color: var(--color-main--primary);
+
+    &-outline {
+      --button__background-color: transparent;
+      --button__border-color: var(--color-main--primary);
+      --button__border-width: 1px;
+      --button__font-family: var(--font-family--primary-bold);
+      --button__font-weight: var(--font-weight--bold);
+      --button__text-color: var(--color-main--primary);
+    }
+  }
+
+  &--secondary {
+    --button__background-color: var(--color-main--secondary);
+  }
+
+  &--icon {
+    .e-icon {
+      --e-icon__font-size: var(--button-icon__font-size, 20px);
+    }
+
+    &-only {
+      --button__background-color: transparent;
+      --button__background-color--hover: transparent;
+      --button__border-width: 0;
+      --button__text-color: var(--color-main--primary);
+      --button__text-color--hover: var(--color-main--primary);
+    }
+  }
+
+  &--disabled {
+    --button__background-color: var(--button__background-color--disabled, var(--color-neutral-gray--10));
+    --button__text-color: var(--button__text-color--disabled, var(--color-neutral-gray--30));
+
+    pointer-events: none;
+  }
+}

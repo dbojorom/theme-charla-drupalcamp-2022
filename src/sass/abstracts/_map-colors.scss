@@ -1,0 +1,72 @@
+///
+/// SASS Color Maps
+/// @group utils
+/// This file contains sass color maps.
+/// ---------------------------------
+
+@use "sass:color";
+
+///# Theme color map
+$color_theme: (
+  main: (
+    'primary'  : var(--color-neutral-blue--100),
+    'secondary': var(--color-neutral-blue--90),
+    'black'    : #000,
+    'white'    : #fff,
+  ),
+  neutral-gray: (
+    '100': #141414,
+    '90' : #262626,
+    '80' : #404040,
+    '70' : #595959,
+    '60' : #6f6f6f,
+    '50' : #8a8a8a,
+    '40' : #a6a6a6,
+    '30' : #bfbfbf,
+    '20' : #d9d9d9,
+    '15' : #f0f0f0,
+    '10' : #fafafa,
+  ),
+  neutral-blue: (
+    '100': #071d49,
+    '90' : #366caf,
+    '80' : #4f85c9,
+    '70' : #6393cf,
+    '60' : #76a0d5,
+    '50' : #8aaedb,
+    '40' : #9dbbe1,
+    '30' : #b1c9e7,
+    '20' : #c4d6ed,
+    '10' : #e0e9f5,
+  ),
+  emphasis: (
+    '100': #52cc82,
+    '150': #166d6b,
+    '200': #ffcf07,
+    '220': #ff8307,
+    '250': #ffeb00,
+    '300': #d3423f,
+    '400': #800080,
+    '450': #7b61ff,
+    '500': #3d68e3,
+  ),
+  alpha: (
+    'primary-10' : color.scale(#071d49, $alpha: -90%),
+  ),
+);
+
+///# Content types color map (entities and media)
+$color_content_types: (
+  entity: (
+    'type-a': var(--color-main--primary),
+    'type-b': var(--color-emphasis--400),
+    'type-c': var(--color-emphasis--250),
+    'type-d': var(--color-emphasis--500),
+  ),
+  media: (
+    'audio'   : var(--color-neutral-gray--20),
+    'document': var(--color-neutral-gray--30),
+    'image'   : var(--color-neutral-gray--40),
+    'video'   : var(--color-neutral-gray--80),
+  ),
+);

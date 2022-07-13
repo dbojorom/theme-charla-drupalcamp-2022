@@ -1,0 +1,11 @@
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/global.css: {}
+
+# component-pager:
+#   version: VERSION
+#   css:
+#     theme:
+#       css/components/pager.css: {}
